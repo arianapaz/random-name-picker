@@ -37,9 +37,7 @@ public class RandomNameGenerator
 	{
 		try
 		{
-			ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-			InputStream inputStream = classLoader.getResourceAsStream(fileName);
-
+			InputStream inputStream = new FileInputStream(fileName);
 			Properties prop = new Properties();
 			prop.load(inputStream);
 
